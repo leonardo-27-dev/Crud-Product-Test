@@ -70,6 +70,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 docker-compose -f docker-compose.fullstack.yml up --build
 ```
 
+
 Esse comando irá:
 1. Construir as imagens dos projetos.
 2. Rodar as migrações automaticamente.
@@ -77,6 +78,55 @@ Esse comando irá:
 4. Iniciar os containers da API e da interface Blazor.
 
 ### Acessando a Aplicação
-- **API** disponível em: `http://localhost:8000`
-- **Interface Blazor** disponível em: `http://localhost:8001`
+- **API** disponível em: [http://localhost:8000](http://localhost:8000)
+- **Interface Blazor** disponível em: [http://localhost:8001](http://localhost:8001)
 
+## 6. Configuração e Execução do Projeto Localmente
+
+### Pré-requisitos
+- .NET 8.0 SDK
+- Docker
+- Docker Compose
+
+### Passos para Configuração
+1. Clone o repositório:
+```bash
+git clone https://github.com/leonardo-27-dev/Crud-Product-Test.git
+
+cd Crud-Product-Test
+```  
+
+### Executando o Projeto
+1. Navegue até o diretório do projeto:
+```bash
+cd CrudProduct
+
+dotnet run
+```  
+
+2. Aplique as migrações:
+```bash
+dotnet ef database update
+```    
+
+### Rodando os Testes Unitários
+1. Navegue até o diretório do projeto de testes:
+```bash
+cd CrudProduct.Test
+```    
+
+2. Execute os testes:
+```bash
+dotnet test
+```     
+
+### Rodando a Interface
+1. Navegue até o diretório da interface:
+```bash
+cd CrudProductInterface
+```    
+
+2. Execute o projeto:
+```bash
+dotnet run
+```  
