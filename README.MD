@@ -41,7 +41,7 @@ Interface do usuário para interagir com a API.
 ## 3. Tecnologias Utilizadas
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-- **.NET 7.0**: Framework principal para desenvolvimento da API e interface Blazor.
+- **.NET 8.0**: Framework principal para desenvolvimento da API e interface Blazor.
 - **Entity Framework Core**: ORM para interação com o banco de dados.
 - **SQLite**: Banco de dados leve para armazenamento local.
 - **Blazor**: Framework para desenvolvimento da interface do usuário.
