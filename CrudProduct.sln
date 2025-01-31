@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudProduct", "CrudProduct\CrudProduct.csproj", "{BED74ECE-A53A-4156-9A78-635E2E90923B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudProduct.Test", "CrudProduct.Test\CrudProduct.Test.csproj", "{0775B3F4-A681-474B-80EC-BC6AFEAD35A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudProductInterface", "CrudProductInterface\CrudProductInterface.csproj", "{C42C3478-844E-43A7-821C-9378167DE5CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BED74ECE-A53A-4156-9A78-635E2E90923B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED74ECE-A53A-4156-9A78-635E2E90923B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED74ECE-A53A-4156-9A78-635E2E90923B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED74ECE-A53A-4156-9A78-635E2E90923B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0775B3F4-A681-474B-80EC-BC6AFEAD35A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0775B3F4-A681-474B-80EC-BC6AFEAD35A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0775B3F4-A681-474B-80EC-BC6AFEAD35A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0775B3F4-A681-474B-80EC-BC6AFEAD35A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C42C3478-844E-43A7-821C-9378167DE5CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C42C3478-844E-43A7-821C-9378167DE5CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C42C3478-844E-43A7-821C-9378167DE5CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C42C3478-844E-43A7-821C-9378167DE5CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

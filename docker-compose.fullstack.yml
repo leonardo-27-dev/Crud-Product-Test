@@ -1,0 +1,24 @@
+services:
+  api:
+    image: api-image
+    build:
+      context: .
+      dockerfile: CrudProduct/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ./CrudProduct/Data:/app/Data
+    ports:
+      - "8000:80"
+
+  blazor:
+    image: blazor-image
+    build:
+      context: .
+      dockerfile: CrudProductInterface/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - api
+    ports:
+      - "8001:81"
