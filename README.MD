@@ -100,14 +100,17 @@ cd Crud-Product-Test
 1. Navegue até o diretório do projeto:
 ```bash
 cd CrudProduct
-
-dotnet run
 ```  
 
 2. Aplique as migrações:
 ```bash
 dotnet ef database update
-```    
+```   
+
+2. Execute o projeto:
+```bash
+dotnet run 
+``` 
 
 ### Rodando os Testes Unitários
 1. Navegue até o diretório do projeto de testes:
