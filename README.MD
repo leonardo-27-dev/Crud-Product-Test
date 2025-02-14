@@ -1,137 +1,152 @@
-# Documentação do Projeto CrudProduct
+# 📝 CrudProduct
 
-## 1. Introdução
-O **CrudProduct** é uma solução para o gerenciamento de produtos, composta por três projetos principais: 
+&#x20;
+
+O **CrudProduct** é uma solução para o gerenciamento de produtos, composta por três projetos principais:
 
 - **CrudProduct**: API principal responsável pelo backend.
 - **CrudProduct.Test**: Projeto de testes unitários.
 - **CrudProductInterface**: Interface Blazor para interação com a API.
 
-## 2. Estrutura do Projeto
-A solução está organizada da seguinte forma:
+---
 
-### **CrudProduct** (API Backend)
-Este projeto contém a lógica de backend e gerenciamento de dados.
+## 🚀 Como usar
 
-- **Controllers/**: Responsável pelo tratamento das requisições HTTP.
-- **Data/**: Configuração do banco de dados utilizando Entity Framework Core.
-- **Migrations/**: Arquivos de migração do banco de dados.
-- **Models/**: Definição das classes que representam as entidades do domínio.
-- **Repositories/**: Camada de acesso a dados para interação com o banco.
-- **Services/**: Contém as regras de negócio e lógica de processamento.
-- **Validations/**: Classes para validação de dados.
-- **appsettings.json**: Arquivo de configurações do sistema.
-- **Dockerfile**: Arquivo de configuração para containerização.
-- **Program.cs**: Ponto de entrada da aplicação.
+### 1️⃣ Clonar o repositório
 
-### **CrudProduct.Test** (Testes Unitários)
-Contém os testes unitários para validação da API.
-
-- **ProductValidatorTest.cs**: Testes que validam as regras de negócio dos produtos.
-
-### **CrudProductInterface** (Interface Blazor)
-Interface do usuário para interagir com a API.
-
-- **Pages/**: Páginas da aplicação Blazor.
-- **wwwroot/**: Arquivos estáticos como CSS, JS e imagens.
-- **appsettings.json**: Configurações específicas da interface.
-- **Dockerfile**: Configuração para containerização.
-- **Program.cs**: Ponto de entrada da aplicação Blazor.
-
-## 3. Tecnologias Utilizadas
-O projeto foi desenvolvido utilizando as seguintes tecnologias:
-
-- **.NET 8.0**: Framework principal para desenvolvimento da API e interface Blazor.
-- **Entity Framework Core**: ORM para interação com o banco de dados.
-- **SQLite**: Banco de dados leve para armazenamento local.
-- **Blazor**: Framework para desenvolvimento da interface do usuário.
-- **xUnit**: Framework de testes unitários.
-- **Docker**: Containerização para facilitar o deploy.
-- **Docker Compose**: Gerenciamento dos containers.
-
-## 4. Desafios Encontrados e Soluções
-
-### **1. Gerenciamento de Dependências**
-- **Problema**: Configurar a API e a interface Blazor para compartilharem as mesmas entidades e padrões de negócio.
-- **Solução**: Implementamos uma camada de serviço que abstrai a lógica de negócio para reutilização entre projetos.
-
-### **2. Integração com Banco de Dados**
-- **Problema**: Definir a melhor abordagem para persistência de dados.
-- **Solução**: Optamos pelo Entity Framework Core com migrações, garantindo flexibilidade na evolução do esquema do banco de dados.
-
-### **3. Testes Unitários e Cobertura de Código**
-- **Problema**: Garantir que a lógica de negócio seja testada corretamente.
-- **Solução**: Implementamos testes unitários cobrindo os principais cenários da aplicação.
-
-## 5. Configuração e Execução do Projeto Localmente
-
-### Pré-requisitos
-- .NET 8.0 SDK
-- Docker
-- Docker Compose
-
-### Passos para Configuração
-1. Clone o repositório:
 ```bash
-git clone https://github.com/leonardo-27-dev/Crud-Product-Test.git
+  git clone https://github.com/leonardo-27-dev/Crud-Product-Test.git
+  cd Crud-Product-Test
+```
 
-cd Crud-Product-Test
-```  
+### 2️⃣ Executando o Projeto
 
-### Executando o Projeto
 1. Navegue até o diretório do projeto:
+
 ```bash
-cd CrudProduct
-```  
+  cd CrudProduct
+```
 
 2. Aplique as migrações:
-```bash
-dotnet ef database update
-```   
 
-2. Execute o projeto:
 ```bash
-dotnet run 
-``` 
+  dotnet ef database update
+```
 
-### Rodando os Testes Unitários
+3. Execute o projeto:
+
+```bash
+  dotnet run
+```
+
+### 3️⃣ Rodando os Testes Unitários
+
 1. Navegue até o diretório do projeto de testes:
+
 ```bash
-cd CrudProduct.Test
-```    
+  cd CrudProduct.Test
+```
 
 2. Execute os testes:
-```bash
-dotnet test
-```     
 
-### Rodando a Interface
-1. Navegue até o diretório da interface:
 ```bash
-cd CrudProductInterface
-```    
+  dotnet test
+```
+
+### 4️⃣ Rodando a Interface
+
+1. Navegue até o diretório da interface:
+
+```bash
+  cd CrudProductInterface
+```
 
 2. Execute o projeto:
+
 ```bash
-dotnet run
-```  
+  dotnet run
+```
 
-## 6. Uso com Docker
+---
 
-### Construir e Subir os Containers com Docker Compose
+## 📁 Estrutura do Projeto
 
-1. Rode o comando no Diretorio Crud-Product-Test
+```
+📦 Crud-Product-Test
+ ┣ 📂 CrudProduct          # API Backend
+ ┃ ┣ 📂 Controllers        # Controladores das requisições HTTP
+ ┃ ┣ 📂 Data               # Configuração do banco de dados
+ ┃ ┣ 📂 Migrations         # Arquivos de migração do banco
+ ┃ ┣ 📂 Models            # Classes de entidades do domínio
+ ┃ ┣ 📂 Repositories      # Camada de acesso a dados
+ ┃ ┣ 📂 Services          # Regras de negócio e processamento
+ ┃ ┣ 📂 Validations       # Classes para validação de dados
+ ┃ ┣ 📜 appsettings.json  # Arquivo de configurações do sistema
+ ┃ ┣ 📜 Dockerfile        # Arquivo de configuração para containerização
+ ┃ ┗ 📜 Program.cs        # Ponto de entrada da aplicação
+ ┣ 📂 CrudProduct.Test     # Projeto de Testes Unitários
+ ┃ ┗ 📜 ProductValidatorTest.cs # Testes das regras de negócio
+ ┣ 📂 CrudProductInterface # Interface Blazor
+ ┃ ┣ 📂 Pages             # Páginas da aplicação Blazor
+ ┃ ┣ 📂 wwwroot           # Arquivos estáticos como CSS e JS
+ ┃ ┣ 📜 appsettings.json  # Configurações da interface
+ ┃ ┣ 📜 Dockerfile        # Configuração para containerização
+ ┃ ┗ 📜 Program.cs        # Ponto de entrada da interface Blazor
+ ┣ 📜 docker-compose.fullstack.yml # Configuração do Docker Compose
+ ┗ 📜 README.md           # Documentação do projeto
+```
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- 🌐 **.NET 8.0** - Framework principal para API e interface Blazor.
+- 🗄️ **Entity Framework Core** - ORM para interação com o banco de dados.
+- 🗃️ **SQLite** - Banco de dados leve para armazenamento local.
+- 💻 **Blazor** - Framework para desenvolvimento da interface.
+- 🧪 **xUnit** - Framework de testes unitários.
+- 🐳 **Docker** - Containerização para facilitar o deploy.
+- 🛠️ **Docker Compose** - Gerenciamento dos containers.
+
+---
+
+## 🔥 Uso com Docker
+
+Você pode rodar o projeto de forma completa utilizando Docker Compose:
+
 ```bash
-docker-compose -f docker-compose.fullstack.yml up --build
+  docker-compose -f docker-compose.fullstack.yml up --build
 ```
 
 Esse comando irá:
+
 1. Construir as imagens dos projetos.
 2. Rodar as migrações automaticamente.
 3. Inicializar o banco de dados SQLite.
 4. Iniciar os containers da API e da interface Blazor.
 
-### Acessando a Aplicação
+### 📡 Acessando a Aplicação
+
 - **API** disponível em: [http://localhost:8000](http://localhost:8000)
 - **Interface Blazor** disponível em: [http://localhost:8001](http://localhost:8001)
+
+---
+
+## 📌 Observações
+
+- Certifique-se de ter o **.NET 8.0 SDK**, **Docker** e **Docker Compose** instalados.
+- A API e a interface Blazor precisam estar rodando simultaneamente para um funcionamento completo.
+- As migrações do banco serão aplicadas automaticamente ao iniciar os containers.
+
+---
+
+## 📜 Licença
+
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
+
+---
+
+💡 **Contribuições são bem-vindas!** Se encontrar algum problema ou quiser sugerir melhorias, fique à vontade para abrir uma issue ou pull request.
+
+✨ *Happy coding!* 🚀
 
